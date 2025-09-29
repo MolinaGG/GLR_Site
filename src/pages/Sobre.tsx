@@ -43,57 +43,29 @@ const team = [
   {
     name: 'Guilherme Molina Solano',
     role: 'Founder & CEO',
-    bio: 'Especialista em automação e dados com 8+ anos transformando processos manuais em soluções inteligentes.',
+    bio: 'Especialista em automação e dados, focado em transformar processos manuais em soluções inteligentes para PMEs.',
     expertise: ['Python & ETL', 'Power BI', 'Automação de Processos', 'LGPD'],
     image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&face=1',
     linkedin: 'https://linkedin.com/in/guilherme-molina-solano',
     email: 'guilhermemolinasolano@gmail.com'
-  },
-  {
-    name: 'Ana Silva',
-    role: 'Tech Lead',
-    bio: 'Arquiteta de soluções com foco em integrações e backup de servidores Windows.',
-    expertise: ['Windows Server', 'PowerShell', 'Azure', 'Backup & Recovery'],
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&face=1',
-    linkedin: 'https://linkedin.com/in/ana-silva-tech',
-    email: 'ana@glrconsultoria.com'
-  },
-  {
-    name: 'Roberto Costa',
-    role: 'IA & Chatbots Specialist',
-    bio: 'Desenvolvedor especializado em chatbots inteligentes e automações com IA.',
-    expertise: ['Node.js', 'WhatsApp API', 'NLP', 'Dialogflow'],
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop&face=1',
-    linkedin: 'https://linkedin.com/in/roberto-costa-ai',
-    email: 'roberto@glrconsultoria.com'
   }
 ];
 
 const milestones = [
   {
-    year: '2020',
-    title: 'Fundação da GLR',
-    description: 'Início das atividades focadas em consultoria de dados para PMEs'
-  },
-  {
-    year: '2021',
-    title: 'Expansão de Serviços',
-    description: 'Adição de backup de servidores e automação de processos'
-  },
-  {
-    year: '2022',
-    title: 'Especialização em IA',
-    description: 'Desenvolvimento de chatbots e soluções de IA aplicada'
-  },
-  {
     year: '2023',
+    title: 'Fundação da GLR',
+    description: 'Início das atividades focadas em automação e consultoria de dados para PMEs'
+  },
+  {
+    year: '2024',
     title: 'Certificação LGPD',
     description: 'Especialização em conformidade e proteção de dados'
   },
   {
-    year: '2024',
-    title: '50+ Projetos',
-    description: 'Mais de 50 projetos entregues com ROI médio de 280%'
+    year: '2025',
+    title: 'Expansão de Serviços',
+    description: 'Ampliação do portfólio com IA, chatbots e integrações avançadas'
   }
 ];
 
@@ -264,11 +236,11 @@ export default function Sobre() {
               Nossa Equipe
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Especialistas apaixonados por transformar desafios técnicos em oportunidades de negócio
+              Especialista dedicado a transformar desafios técnicos em oportunidades de crescimento
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -276,23 +248,23 @@ export default function Sobre() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-50 dark:bg-slate-800 p-6 rounded-3xl text-center hover:shadow-xl transition-shadow"
+                className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl text-center hover:shadow-xl transition-shadow max-w-md"
               >
                 <img 
                   src={member.image}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
                 />
                 
-                <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-1">
+                <h3 className="font-semibold text-xl text-slate-900 dark:text-white mb-2">
                   {member.name}
                 </h3>
                 
-                <p className="text-primary-500 font-medium mb-4">
+                <p className="text-primary-500 font-medium mb-6">
                   {member.role}
                 </p>
                 
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                <p className="text-slate-600 dark:text-slate-400 mb-8">
                   {member.bio}
                 </p>
 

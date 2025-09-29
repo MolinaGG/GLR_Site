@@ -22,7 +22,6 @@ export default function Navbar() {
   const menuItems = [
     { path: '/', label: 'Home' },
     { path: '/servicos', label: 'Serviços' },
-    { path: '/cases', label: 'Cases' },
     { path: '/sobre', label: 'Sobre' },
     { path: '/blog', label: 'Blog' },
     { path: '/contato', label: 'Contato' },

@@ -7,7 +7,6 @@ import Footer from './components/layout/Footer';
 import ConsentBanner from './components/ConsentBanner';
 import Home from './pages/Home';
 import Servicos from './pages/Servicos';
-import Cases from './pages/Cases';
 import Sobre from './pages/Sobre';
 import Blog from './pages/Blog';
 import Contato from './pages/Contato';
@@ -25,7 +24,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/servicos" element={<Servicos />} />
-                <Route path="/cases" element={<Cases />} />
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contato" element={<Contato />} />
